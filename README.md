@@ -9,8 +9,8 @@
 	<BR>2. Nguyễn Trung Kiên (Student1513403)
 	<BR>3. Phạm Đức Quỳnh 	 (Student1513379)	
 <BR>=======================================
-<BR>Documentations: https://github.com/L3nhan/gitHUBPush/tree/master/Documentations
+<BR>Documentations: https://hutee-le.github.io/Makeup_Group01/Documentations
 <BR>=======================================
-<BR>Published website: https://l3nhan.github.io/gitHUBPush/
+<BR>Published website: https://hutee-le.github.io/Makeup_Group01/homepage.html
 <BR>=======================================
 <BR>Thank you for visit our website.
