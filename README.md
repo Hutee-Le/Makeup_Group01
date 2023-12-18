@@ -8,6 +8,7 @@
 	1. Lê Minh Nhựt       (Student1515874)
 	2. Nguyễn Trung Kiên	(Student1513403)
 	3. Phạm Đức Quỳnh 	  (Student1513379)	
+
 =======================================
 Documentations : https://github.com/L3nhan/doodle_group01/tree/main/Documentations
 =======================================
