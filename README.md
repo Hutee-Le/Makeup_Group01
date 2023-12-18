@@ -1,17 +1,16 @@
 ﻿# Makeup_Group01
 =======================================
-+ Supervisor		: LÊ THANH NHÂN
-+ Semester		: I	
-+ Batch No		: T5.2309.E0	
-+ Group No:		: 01
++ Supervisor : LÊ THANH NHÂN
++ Semester : I
++ Batch No : Tê-0009-M0
++ Group No: : 100
 + List Of Member:
-	1. Lê Minh Nhựt       (Student1515874)
-	2. Nguyễn Trung Kiên  (Student1513403)
-	3. Phạm Đức Quỳnh     (Student1513379)	
-
+1. Lê Văn A (Student0000001)
+2. Trần Văn Sê (Student0000002)
+3. Nguyễn Thị Bê (Student0000003)
 =======================================
-Documentations : https://github.com/L3nhan/doodle_group01/tree/main/Documentations
+Documentations: https://github.com/L3nhan/gitHUBPush/tree/master/Documentations
 =======================================
-Published website : https://l3nhan.github.io/doodle_group01/
+Published website: https://l3nhan.github.io/gitHUBPush/
 =======================================
 Thank you for visit our website.
