@@ -308,3 +308,137 @@ ol {
 .humberger__open {
   display: none;
 }
+
+/*---------------------
+  Hero
+-----------------------*/
+.hero__categories {
+  background-color: #cc866c;
+  border-radius: 5px;
+  padding: 15px;
+  position: relative;
+}
+
+.hero__categories__all {
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero__categories__all span {
+  font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.fa-chevron-down{
+  position: absolute;
+    right: 27px;
+    top: 19px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.fa-bars{
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.hero__categories__list {
+  list-style: none;
+  padding: 0;
+  display: none; 
+}
+
+.hero__categories__list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hero__categories__list li:last-child {
+  border-bottom: none;
+}
+
+.hero__categories__list li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.hero__categories__list ul {
+  display: none; 
+  list-style-type: none; 
+  padding-left: 20px; 
+  background-color: #ddd; 
+  border-radius: 5px; 
+  margin-top: 5px; 
+}
+
+.hero__categories__list li:hover > ul {
+  display: block; 
+}
+
+.hero__categories__list li ul li {
+  padding: 5px 0; 
+  border-bottom: 1px solid #ccc; 
+}
+
+.hero__categories__list li ul li:last-child {
+  border-bottom: none; 
+}
+
+.hero__categories__list li ul li a {
+  color: #333; 
+  text-decoration: none; 
+}
+
+.hero__categories__list li ul li a:hover {
+  text-decoration: underline; 
+}
+
+.hero__categories__list p {
+  font-size: 0.9em; 
+  color: #666; 
+  padding: 5px 0; 
+}
+
+.hero__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__search__form {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.hero__search__form input[type="text"] {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  width: 80%;
+  margin-right: 10px;
+}
+
+.site-btn {
+  background-color: #cc866c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.site-btn:hover {
+  background-color: #c39280;
+}
+
+.carousel-item {
+  height: 400px; 
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: center; 
+  height: 100%; 
+}
