@@ -162,6 +162,11 @@ ol {
   background: #000;
 }
 
+.spad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 
 /*---------------------
   Header
@@ -437,14 +442,79 @@ ol {
   background-color: #c39280;
 }
 
+.section-title {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.section-title span {
+  font-size: 20px;
+    color: #c39280;
+    font-weight: 500;
+    letter-spacing: 4px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+  color: #200204;
+  font-size: 50px;
+  line-height: 50px;
+}
+
 .carousel-item {
-  height: 400px; 
+  height: 600px !important; 
 }
 
 .carousel-item img {
   object-fit: cover;
   object-position: center; 
   height: 100%; 
+}
+
+.carousel-caption h3 {
+  font-size: 28px; 
+  font-family: 'Arial', sans-serif; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.carousel-caption p {
+  font-size: 17px; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*---------------------
+  About
+-----------------------*/
+
+.section-title span {
+  font-size: 20px;
+  color: #c39280;
+  font-weight: 500;
+  letter-spacing: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.about__text .section-title h2 {
+  font-size: 50px;
+}
+
+.section-title h2 {
+  font-family: "Mattings Regular";
+  line-height: 50px;
+}
+
+.section-title h2:after {
+  background: white;
+}
+
+.about__text p {
+  color: #200204;
+  line-height: 30px;
+  margin-bottom: 65px;
 }
 
 /* QUYNH */
