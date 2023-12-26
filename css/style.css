@@ -79,6 +79,7 @@ ol {
   margin: 0;
 }
 
+
 /*---------------------
   Helper CSS
 -----------------------*/
@@ -90,17 +91,6 @@ ol {
   color: #1c1c1c;
   font-weight: 700;
   position: relative;
-}
-.section-title h2:after {
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  right: 0;
-  height: 4px;
-  width: 80px;
-  background: #7fad39;
-  content: "";
-  margin: 0 auto;
 }
 
 .set-bg {
@@ -319,7 +309,7 @@ ol {
 }
 
 /*---------------------
-  Hero
+  Home Page
 -----------------------*/
 .hero__categories {
   background-color: #cc866c;
@@ -485,10 +475,6 @@ ol {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/*---------------------
-  About
------------------------*/
-
 .section-title span {
   font-size: 20px;
   color: #c39280;
@@ -516,6 +502,56 @@ ol {
   line-height: 30px;
   margin-bottom: 65px;
 }
+
+.top-services {
+  position: relative;
+}
+
+.top-services::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 825px;
+  background: url(../img/services-bg.png) ;
+  width: 100%;
+  content: "";
+  z-index: -1;
+}
+
+.services__item__text {
+  padding: 30px 30px;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: calc(100% - 30px);
+  transition: all, 0.3s;
+}
+
+.services__item.services__item__top:hover .services__item__text {
+  top: 30px;
+}
+.services__item:hover .services__item__text {
+  top: -30px;
+  box-shadow: 0px 5px 25px rgba(83, 116, 131, 0.16);
+  background: #ffffff;
+}
+
+
+.services__item__text h5 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #200204;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services__item__text span {
+  color: #c39280;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 
 /* QUYNH */
 /* Basic */
@@ -758,8 +794,10 @@ color: #ffffff;
   display: inline-block;
 }
 
-.header__menu {
+.header__menu { 
   padding: 24px 0;
+  display: flex;
+  justify-content: center; 
 }
 
 .header__menu ul li {
@@ -1350,4 +1388,11 @@ ul.social_icon li a i:hover {
 
 .services{
   margin: 40px auto;
+}
+
+
+@media only screen and (min-width: 1450px){
+.container {
+    max-width: 1410px;
+}
 }
