@@ -8,3 +8,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+
+document.getElementById('bookingBtn').addEventListener('click', function () {
+    window.location.href = './booking.html';
+});
