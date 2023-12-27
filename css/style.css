@@ -626,10 +626,10 @@ ol {
 
 .services__page__text .price::after {
   position: absolute;
-  left: 85px;
-  top: 13px;
+  left: 175px;
+  top: 15px;
   height: 1px;
-  width: 78px;
+  width: 80px;
   background: #c39280;
   content: "";
 }
