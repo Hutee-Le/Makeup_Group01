@@ -562,6 +562,14 @@ ol {
   z-index: -1;
 }
 
+.services-page .row {
+  margin-bottom: 15px; 
+}
+
+.services-page .row .col-lg-6 {
+  padding-bottom: 30px; 
+}
+
 .services__item__text {
   padding: 30px 30px;
   position: relative;
@@ -603,6 +611,29 @@ ol {
   object-fit: cover;
 }
 
+.services__page__pic__item.small__item {
+  padding-top: 50px;
+}
+
+.services__page__text .price {
+  font-size: 16px;
+  color: #c39280;
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.services__page__text .price::after {
+  position: absolute;
+  left: 175px;
+  top: 15px;
+  height: 1px;
+  width: 80px;
+  background: #c39280;
+  content: "";
+}
+
 /*---------------------
   Service Page
 -----------------------*/
@@ -610,6 +641,86 @@ ol {
   width: calc(50% - 30px);
   margin-right: 30px;
   float: left;
+}
+
+.services__page__text h2 {
+  color: #200204;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.services__page__text p {
+  color: #200204;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.services__page__text ul {
+  margin-bottom: 40px;
+}
+
+.services__page__text ul li {
+  list-style: none;
+  font-size: 15px;
+  color: #200204;
+  margin-bottom: 15px;
+}
+
+.icon_check::before {
+  content: "\2713"; 
+  font-size: 15px;
+  color: #c39280;
+}
+
+.services__page__text ul li span {
+  font-size: 15px;
+  color: #c39280;
+  margin-right: 15px;
+}
+
+/*---------------------
+  Booking Page
+-----------------------*/
+.booking-section {
+  padding: 50px 0;
+}
+
+.booking-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.booking-section form {
+  margin-top: 20px;
+}
+
+.left-column-bg {
+  background: url('../img/callto-text-bg.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.booking-form-bg {
+  background: url('../img/callto-quote-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 30px;
+}
+
+.booking-section button {
+  background-color: #c39280;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.booking-section button:hover {
+  background-color: #c39280;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* QUYNH */
