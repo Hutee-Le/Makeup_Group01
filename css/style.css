@@ -497,7 +497,7 @@ ol {
 }
 
 .carousel-item {
-  height: 600px !important;
+  height: 450px !important;
 }
 
 .carousel-item img {
@@ -1682,7 +1682,7 @@ ul.social_icon li a i:hover {
   margin-bottom: 70px;
 }
 
-/********** Class CSS **********/
+/********** Gallery **********/
 /*******************************/
 .class {
   position: relative;
