@@ -20,12 +20,17 @@ $(".product__details__pic__slider").owlCarousel({
     autoplay: true
 });
 
-// Background Set
+// Setbg
 
 $('.set-bg').each(function () {
     var bg = $(this).data('setbg');
     $(this).css('background-image', 'url(' + bg + ')');
 });
+// 
+ function Check(){
+    var nTime = prompt('Bạn đã đọc review về Artist này chưa?')
+    
+ }
 
 $('.product__details__pic__slider img').on('click', function () {
     var imgurl = $(this).data('imgbigurl');
