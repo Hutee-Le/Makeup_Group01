@@ -1730,3 +1730,450 @@ ul.social_icon li a i:hover {
 .class .class-meta p:first-child {
   margin-right: 10px;
 }
+
+
+
+/*------------------------------------
+KIEN - contact page - start
+-------------------------------------*/
+
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+h3,
+.h3
+ {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-3,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-12,
+.col-lg-3,
+.col-lg-6
+ {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-md-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 41.66667%;
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+
+.col-md-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-7 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 58.33333%;
+  flex: 0 0 58.33333%;
+  max-width: 58.33333%;
+}
+
+.col-lg-3 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-lg-6 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.h3
+ {
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #000;
+}
+
+.ftco-section {
+  padding: 3em 0;
+}
+
+.text{
+  text-align: center;
+}
+
+.contact-wrap {
+  background: #e8edf0;
+}
+
+.dbox {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.dbox p {
+  margin-bottom: 0;
+}
+
+.dbox p span {
+  font-weight: 500;
+  color: #000;
+}
+
+.dbox p a {
+  color: #2553b8;
+}
+
+.dbox .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #cc866c;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.dbox .icon span {
+  font-size: 20px;
+  color: #fff;
+}
+
+.dbox .text {
+  width: 100%;
+}
+/*------------------------------------
+KIEN - contact page - end
+-------------------------------------*/
+
+
+/*------------------------------------
+KIEN - review page - start
+-------------------------------------*/
+a {
+  text-decoration: none !important;
+  color: inherit
+}
+
+a:hover {
+  color: #455A64
+}
+
+.card {
+  background-color: rgba(223, 181, 208, 0.07);
+  margin-bottom: 20px;
+}
+
+.comment_box{
+  background-color: rgba(223, 181, 208, 0.07);
+  margin-right: 0px;
+  margin-left: 0px;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
+
+.comment_label{
+  font-weight: bold;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+
+
+.row_cmt{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.info_artist{
+
+}
+
+.ranting_zone{
+  padding-top: 2.6rem;
+}
+
+.img_arttist{
+padding-bottom: 0px;
+}
+.customers_text{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.customers_pic{
+  display: flex;
+  transition: transform 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.mt-2 {
+font-size: 1.3rem;
+}
+
+/*-------Start Avegare Rating------- */
+.rating-box {
+  width: 130px;
+  height: 130px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FBC02D;
+}
+.rating_average{
+  text-align: center;
+  padding-top:10px;
+}
+.rating_average_5{
+text-align: center;
+}
+
+.rating_star{
+  padding-left: 48px;
+}
+.rating-label {
+  font-weight: bold
+}
+.rating-bar {
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px
+}
+
+.flex-column{
+  padding-top: 10px;
+}
+
+.artist_name{
+font-size: 1.5rem;
+}
+
+
+.comments_table{
+  padding-bottom: 20px;
+  
+}
+.comments_title{
+padding-top: 20px;
+padding-bottom: 5px;
+font-size: 1.3rem;
+
+}
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 5px
+}
+
+.bar-5 {
+  width: 70%;
+  height: 13px;
+  background-color: #FBC02D;
+  border-radius: 20px
+}
+
+.bar-4 {
+  width: 30%;
+  height: 13px;
+  background-color: #FBC02D;
+  border-radius: 20px
+}
+
+.bar-3 {
+  width: 20%;
+  height: 13px;
+  background-color: #FBC02D;
+  border-radius: 20px
+}
+
+.bar-2 {
+  width: 10%;
+  height: 13px;
+  background-color: #FBC02D;
+  border-radius: 20px
+}
+
+.bar-1 {
+  width: 0%;
+  height: 13px;
+  background-color: #FBC02D;
+  border-radius: 20px
+}
+
+
+
+td {
+  padding-bottom: 5px;
+}
+
+.star-active {
+  color: #FBC02D;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.star-active:hover {
+  color: #F9A825;
+  cursor: pointer
+}
+
+.star-inactive {
+  color: #CFD8DC;
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+/*-------End Rating Table-------*/
+
+
+.blue-text {
+  color: #0091EA
+}
+
+.content {
+  font-size: 18px
+}
+
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  margin-right: 30px
+}
+
+.pic {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.vote {
+  cursor: pointer
+}
+
+.title-arttist{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.title-arttist{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.review-art {
+  padding-top: 20px;
+}
+
+.commment_btn{
+  display: flex;
+}
+.site-btn{
+  margin-right: 10px;
+}
+
+/*------------------------------------
+KIEN - review page - end
+-------------------------------------*/
