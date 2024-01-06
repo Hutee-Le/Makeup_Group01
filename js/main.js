@@ -10,7 +10,7 @@ $(document).ready(function () {
   });
 
   // Artists detail
-$(".product__details__pic__slider").owlCarousel({
+$(".artist__details__pic__slider").owlCarousel({
     loop: true,
     margin: 20,
     items: 4,
@@ -32,12 +32,12 @@ $('.set-bg').each(function () {
     
  }
 
-$('.product__details__pic__slider img').on('click', function () {
+$('.artist__details__pic__slider img').on('click', function () {
     var imgurl = $(this).data('imgbigurl');
     if (imgurl) {
-        var bigImg = $('.product__details__pic__item--large').attr('src');
+        var bigImg = $('.artist__details__pic__item--large').attr('src');
         if (imgurl !== bigImg) {
-            $('.product__details__pic__item--large').attr('src', imgurl);
+            $('.artist__details__pic__item--large').attr('src', imgurl);
         }
     } else {
         console.error("Thuộc tính data-imgbigurl không được thiết lập hoặc không hợp lệ.");
