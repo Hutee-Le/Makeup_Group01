@@ -168,3 +168,93 @@ function getStarRating(rating) {
     }
     return starsHtml;
 }
+
+// Function to update available date and time options based on selected location
+function updateDateTimeOptions() {
+    var locationSelect = document.getElementById('location');
+    var dateTimeSelect = document.getElementById('date');
+    var downtownMap = document.getElementById('downtown-map');
+    var uptownMap = document.getElementById('uptown-map');
+
+    downtownMap.style.display = 'none';
+    uptownMap.style.display = 'none';
+    
+    dateTimeSelect.innerHTML = '';
+    dateTimeSelect.disabled = false;
+
+    if (locationSelect.value === 'downtown') {
+        dateTimeSelect.innerHTML += '<option value="2024-03-10T10:00">March 10, 2024 at 10:00 AM</option>';
+        dateTimeSelect.innerHTML += '<option value="2024-03-11T14:00">March 11, 2024 at 2:00 PM</option>';
+        downtownMap.style.display = 'block';
+    } else if (locationSelect.value === 'uptown') {
+        dateTimeSelect.innerHTML += '<option value="2024-03-12T13:00">March 12, 2024 at 1:00 PM</option>';
+        dateTimeSelect.innerHTML += '<option value="2024-03-13T16:00">March 13, 2024 at 4:00 PM</option>';
+        uptownMap.style.display = 'block';
+    }
+}
+
+// Function Validate Booking Form
+function validateForm() {
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+    var artist = document.getElementById('artist');
+    var service = document.getElementById('service');
+    var location = document.getElementById('location');
+
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    var phoneRegex = /^[0-9]{10}$/;
+
+    if (!name.value) {
+        alert('Please enter your Name.');
+        name.focus();
+        return false;
+    }
+
+    if (!email.value || !emailRegex.test(email.value)) {
+        alert('Please enter a valid Email. Format: username@domain.com');
+        email.focus();
+        return false;
+    }
+
+    if (!phone.value || !phoneRegex.test(phone.value)) {
+        alert('Please enter a valid Phone Number. Format: 10 digits without spaces or dashes.');
+        phone.focus();
+        return false;
+    }
+
+    if (artist.selectedIndex === 0) {
+        alert('Please select a Makeup Artist.');
+        artist.focus();
+        return false;
+    }
+
+    if (service.selectedIndex === 0) {
+        alert('Please select a Service.');
+        service.focus();
+        return false;
+    }
+
+    if (location.selectedIndex === 0) {
+        alert('Please select a Location.');
+        location.focus();
+        return false;
+    }
+
+    return true;
+}
+
+// Function Check Submit Booking Form
+function submitForm() {
+    if (validateForm()) {
+        alert("Your booking registration has been successfully sent. Please wait, a consultant will contact you soon.");
+        return true; 
+    } else {
+        return false; 
+    }
+}
+
+
+
+
+
