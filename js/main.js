@@ -2,11 +2,11 @@
 var ratings = {
     totalScore: 8,
     totalCount: 2,
-    countExcellent: 0, 
-    countGood: 2,      
-    countAverage: 0,   
-    countPoor: 0,      
-    countTerrible: 0,   
+    countExcellent: 0,
+    countGood: 2,
+    countAverage: 0,
+    countPoor: 0,
+    countTerrible: 0,
     barExcellentElement: 0,
     barGoodElement: 100,
     barAverageElement: 0,
@@ -194,14 +194,44 @@ function submitForm() {
 
 //----------------Review---------------//
 // ZoomIn - ZomOut
-function zoomIn(element) {
-    element.style.transform = "scale(1.5)";
-    element.style.zIndex = "2";
+function zoomIn(img) {
+    var overlay = document.getElementById('overlay');
+    var zoomedImage = document.getElementById('zoomed-image');
+
+    
+    overlay.style.display = 'flex';
+    zoomedImage.src = img.src;
+
+    
+    zoomedImage.style.transform = 'scale(1)';
+    setTimeout(function () {
+        zoomedImage.style.transform = 'scale(1.2)';
+    }, 10);
 }
-function zoomOut(element) {
-    element.style.transform = "scale(1)";
-    element.style.zIndex = "1";
+
+function zoomOut() {
+    var overlay = document.getElementById('overlay');
+    var zoomedImage = document.getElementById('zoomed-image');
+
+
+    overlay.style.display = 'none';
+
+    zoomedImage.style.transform = 'scale(1)';
 }
+
+function showTooltip(img, text) {
+    var tooltip = document.getElementById('tooltip');
+    tooltip.innerText = text;
+    tooltip.style.display = 'block';
+    tooltip.style.left = img.offsetLeft + 'px';
+    tooltip.style.top = img.offsetTop + img.offsetHeight + 'px';
+}
+
+function hideTooltip() {
+    var tooltip = document.getElementById('tooltip');
+    tooltip.style.display = 'none';
+}
+
 
 //---Add Comment----//
 function addComment() {
@@ -211,10 +241,10 @@ function addComment() {
     var rating = document.querySelector('input[name="rating"]:checked');
 
     if (name && isValidEmail(email) && message && rating) {
-        
+
         var ratingValue = rating.value;
 
-    
+
         var commentDiv = document.createElement("div");
         commentDiv.className = "card";
 
@@ -273,28 +303,26 @@ function addComment() {
 
         var replyDiv = document.createElement("div");
         replyDiv.className = "row_cmt text-left mt-4";
-        
+
         var likeDiv = document.createElement("div");
-        likeDiv.className = "like mr-3 vote";
-    
+        likeDiv.className = "mr-3 vote";
+
         var replyImg = document.createElement("img");
         replyImg.src = "";
         replyImg.width = "3%";
-    
+
         var replySpan = document.createElement("span");
         replySpan.className = "blue-text pl-2";
         replySpan.appendChild(document.createTextNode("Reply"));
-    
+
         likeDiv.appendChild(replyImg);
         likeDiv.appendChild(replySpan);
         replyDiv.appendChild(likeDiv);
-    
 
         commentDiv.appendChild(replyDiv);
 
-
         var commentsContainer = document.getElementById("comments");
-       
+
         if (commentsContainer.children.length > 0) {
             commentsContainer.insertBefore(commentDiv, commentsContainer.firstChild);
         } else {
@@ -317,7 +345,6 @@ function addComment() {
     document.querySelector('input[name="rating"]:checked').checked = false;
 
 }
-
 
 
 function updateRatingStats() {
@@ -350,36 +377,36 @@ function updateRatingStats() {
 
     var barExcellentElement = document.getElementById('barExcellent');
     if (barExcellentElement) {
-        barExcellentElement.style.width = (ratings.countExcellent / ratings.totalCount * 100) + '%'; 
-        barExcellentElement.style.backgroundColor = '#fcda84'; 
+        barExcellentElement.style.width = (ratings.countExcellent / ratings.totalCount * 100) + '%';
+        barExcellentElement.style.backgroundColor = '#fcda84';
     }
     document.getElementById('countExcellent').textContent = ratings.countExcellent;
 
     var barGoodElement = document.getElementById('barGood');
     if (barGoodElement) {
-        barGoodElement.style.width = (ratings.countGood / ratings.totalCount * 100) + '%'; 
-        barGoodElement.style.backgroundColor = '#fcda84'; 
+        barGoodElement.style.width = (ratings.countGood / ratings.totalCount * 100) + '%';
+        barGoodElement.style.backgroundColor = '#fcda84';
     }
     document.getElementById('countGood').textContent = ratings.countGood;
 
     var barAverageElement = document.getElementById('barAverage');
     if (barAverageElement) {
-        barAverageElement.style.width = (ratings.countAverage / ratings.totalCount * 100) + '%'; 
-        barAverageElement.style.backgroundColor = '#fcda84'; 
+        barAverageElement.style.width = (ratings.countAverage / ratings.totalCount * 100) + '%';
+        barAverageElement.style.backgroundColor = '#fcda84';
     }
     document.getElementById('countAverage').textContent = ratings.countAverage;
 
     var barPoorElement = document.getElementById('barPoor');
     if (barPoorElement) {
-        barPoorElement.style.width = (ratings.countPoor / ratings.totalCount * 100) + '%'; 
-        barPoorElement.style.backgroundColor = '#fcda84'; 
+        barPoorElement.style.width = (ratings.countPoor / ratings.totalCount * 100) + '%';
+        barPoorElement.style.backgroundColor = '#fcda84';
     }
     document.getElementById('countPoor').textContent = ratings.countPoor;
 
     var barTerribleElement = document.getElementById('barTerrible');
     if (barTerribleElement) {
-        barTerribleElement.style.width = (ratings.countTerrible / ratings.totalCount * 100) + '%'; 
-        barTerribleElement.style.backgroundColor = '#fcda84'; 
+        barTerribleElement.style.width = (ratings.countTerrible / ratings.totalCount * 100) + '%';
+        barTerribleElement.style.backgroundColor = '#fcda84';
     }
     document.getElementById('countTerrible').textContent = ratings.countTerrible;
 
@@ -420,7 +447,13 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+function toggleLike(element) {
+    // Toggle class "liked" on the like element
+    element.classList.toggle('liked');
+}
 //----------------Review---------------//
+
+
 
 
 //--------------Contact Us--------------//
@@ -491,4 +524,4 @@ function showNotification(message) {
     notificationDiv.innerHTML = message;
     notificationDiv.style.display = 'block';
 }
-//End----------Contact Us------------//
+//-----------Contact Us------------//
