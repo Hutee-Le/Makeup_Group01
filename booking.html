@@ -128,7 +128,7 @@
                     
                 </div>
                 <div class="col-md-6 booking-form-bg">
-                    <form action="https://hutee-le.github.io/Makeup_Group01/booking.html" method="post" onsubmit="return submitForm()">
+                    <form action="" method="post" id="booking-form" onsubmit="return submitForm()">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" name="name">
@@ -189,7 +189,9 @@
                         </div>
                         <div class="form-group">
                             <label for="date">Choose Date and Time:</label>
-                            <select class="form-control" id="date" name="date" disabled></select>
+                            <select class="form-control" id="date" name="date" disabled>
+                                <option value="" disabled selected>Select Date and Time</option>
+                            </select>
                         </div>            
                         <button type="submit" class="btn btn-primary mt-3">Book Now</button>
                     </form>

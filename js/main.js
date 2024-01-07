@@ -1,15 +1,15 @@
 // Artist
 $(document).ready(function () {
-    
-    $('#class-filter li').on('click', function () {
-      $("#class-filter li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-      var filterValue = $(this).data('filter');
-      $('.class-container').isotope({ filter: filterValue });
-    });
-  });
 
-  // Artists detail
+    $('#class-filter li').on('click', function () {
+        $("#class-filter li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+        var filterValue = $(this).data('filter');
+        $('.class-container').isotope({ filter: filterValue });
+    });
+});
+
+// Artists detail
 $(".artist__details__pic__slider").owlCarousel({
     loop: true,
     margin: 20,
@@ -27,10 +27,10 @@ $('.set-bg').each(function () {
     $(this).css('background-image', 'url(' + bg + ')');
 });
 // 
- function Check(){
+function Check() {
     var nTime = prompt('Bạn đã đọc review về Artist này chưa?')
-    
- }
+
+}
 
 $('.artist__details__pic__slider img').on('click', function () {
     var imgurl = $(this).data('imgbigurl');
@@ -178,15 +178,17 @@ function updateDateTimeOptions() {
 
     downtownMap.style.display = 'none';
     uptownMap.style.display = 'none';
-    
+
     dateTimeSelect.innerHTML = '';
     dateTimeSelect.disabled = false;
 
     if (locationSelect.value === 'downtown') {
+        dateTimeSelect.innerHTML += '<option value="" disabled selected>Select Date and Time</option>';
         dateTimeSelect.innerHTML += '<option value="2024-03-10T10:00">March 10, 2024 at 10:00 AM</option>';
         dateTimeSelect.innerHTML += '<option value="2024-03-11T14:00">March 11, 2024 at 2:00 PM</option>';
         downtownMap.style.display = 'block';
     } else if (locationSelect.value === 'uptown') {
+        dateTimeSelect.innerHTML += '<option value="" disabled selected>Select Date and Time</option>';
         dateTimeSelect.innerHTML += '<option value="2024-03-12T13:00">March 12, 2024 at 1:00 PM</option>';
         dateTimeSelect.innerHTML += '<option value="2024-03-13T16:00">March 13, 2024 at 4:00 PM</option>';
         uptownMap.style.display = 'block';
@@ -201,6 +203,7 @@ function validateForm() {
     var artist = document.getElementById('artist');
     var service = document.getElementById('service');
     var location = document.getElementById('location');
+    var dateTimeSelect = document.getElementById('date');
 
     var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     var phoneRegex = /^[0-9]{10}$/;
@@ -241,6 +244,12 @@ function validateForm() {
         return false;
     }
 
+    if (dateTimeSelect.selectedIndex <= 0) {
+        alert('Please select a Date and Time.');
+        dateTimeSelect.focus();
+        return false;
+    }
+
     return true;
 }
 
@@ -248,9 +257,23 @@ function validateForm() {
 function submitForm() {
     if (validateForm()) {
         alert("Your booking registration has been successfully sent. Please wait, a consultant will contact you soon.");
-        return true; 
+
+        document.getElementById('booking-form').reset();
+
+        // Clear the date and time select options
+        var dateTimeSelect = document.getElementById('date');
+        dateTimeSelect.innerHTML = '<option value="" disabled selected>Select Date and Time</option>';
+        dateTimeSelect.disabled = true;
+
+        // Hide the maps
+        var downtownMap = document.getElementById('downtown-map');
+        var uptownMap = document.getElementById('uptown-map');
+        downtownMap.style.display = 'none';
+        uptownMap.style.display = 'none';
+
+        return false;
     } else {
-        return false; 
+        return false;
     }
 }
 
