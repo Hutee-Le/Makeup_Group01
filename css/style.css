@@ -1481,12 +1481,21 @@ ul.social_icon li a i:hover {
 /*------------------------------------
 KIEN - contact page - start
 -------------------------------------*/
-
+.contactUs {
+  padding-top: 2em;
+}
+.mb-4{
+  font-family: cursive;
+}
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0rem;
   font-size: 1rem;
+  font-weight: bold;
+}
+.text_or{
+  padding-top: 35px;
 }
 
 .h3 {
@@ -1499,144 +1508,16 @@ label {
   font-size: 2rem;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.col-md-3,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-12,
-.col-lg-3,
-.col-lg-6 {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.col-md-3 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col-md-5 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 41.66667%;
-  flex: 0 0 41.66667%;
-  max-width: 41.66667%;
-}
-
-.col-md-6 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
 .col-md-7 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 58.33333%;
-  flex: 0 0 58.33333%;
-  max-width: 58.33333%;
-}
-
-.col-lg-3 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col-lg-6 {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-}
-
-textarea.form-control {
-  height: auto;
+  padding-left: 0px;
 }
 
 .form-group {
   margin-bottom: 1rem;
 }
 
-.d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.justify-content-center {
-  -webkit-box-pack: center !important;
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-}
-
-.align-items-center {
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
-}
-
-.stretched-link::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: auto;
-  content: "";
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.mb-5 {
-  margin-bottom: 3rem !important;
-}
-
 .p-4 {
   padding: 1.5rem !important;
-}
-
-.h3 {
-  line-height: 1.5;
-  font-weight: 400;
-  font-family: "Poppins", Arial, sans-serif;
-  color: #000;
-}
-
-.contactUs {
-  padding-top: 3em;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .text {
@@ -1644,8 +1525,21 @@ textarea.form-control {
 }
 
 .contact-wrap {
-  background: #e8edf0;
+  background-color: rgba(223, 181, 208, 0.07);
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 0.25rem;
 }
+.contact-map{
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: 0.25rem;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contact_send{
+  padding-top: 5px
+}
+
 
 .dbox {
   width: 100%;
@@ -1683,9 +1577,7 @@ textarea.form-control {
 .dbox .text {
   width: 100%;
 }
-.text_or{
-  padding-top: 45px;
-}
+
 /*------------------------------------
 KIEN - contact page - end
 -------------------------------------*/
@@ -1705,7 +1597,7 @@ a:hover {
 
 .card {
   background-color: rgba(223, 181, 208, 0.07);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .comment_box {
