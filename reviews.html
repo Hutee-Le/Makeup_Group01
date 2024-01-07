@@ -13,15 +13,16 @@
 	<meta name="author" content="">
 
 	<!-- bootstrap css -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
 	<link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
 
-
 	<!-- style css -->
 	<link rel="stylesheet" href="css/style.css">
-
-
-
 
 </head>
 
@@ -66,165 +67,165 @@
 	</header>
 	<!-- Header Section End -->
 
-
-
-
 	<!-- Section Begin -->
 	<section class="review-art">
-
 		<div class="container">
 			<div>
-				<p class="title-arttist">Arttist Review</p>
+				<h2 class="title-arttist">Arttist Review</h2>
 			</div>
+			<a class="artist_name">Taylor Switch</a>
 			<div class="row justify-content-center">
-				<div class="col-lg-4 col-md-4 info_artist">
-					<a class="artist_name">Taylor Switch</a>
+				<div class="info_artist col-lg-4 col-md-4 ">
+
 					<div class="img_arttist">
-						<img width="100%" src="./img/sourceImg/artist/1080x1020/1.png" alt="">
+						<img class="bordered-image" src="./img/sourceImg/artist/1080x1020/1.png" alt="Taylor Switch">
 					</div>
 					<div>
 						<p class="customers_text">Pictures of some customers</p>
 					</div>
-					<div class="customers_pic">
-						<img src="./img/sourceImg/review/k1.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)"
-							style="width:24%;">
-						<img src="./img/sourceImg/review/k2.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)"
-							style="width: 24%;">
-						<img src="./img/sourceImg/review/k3.jpeg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)"
-							style="width: 24%;">
-						<img src="./img/sourceImg/review/k4.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)"
-							style="width: 24%;">
+					<div class="customers-zone">
+						<img class="cuscustomers_pic" src="./img/sourceImg/review/k1.jpg" data-tooltip="Click to Zoom"
+							onclick="zoomIn(this)" onmouseout="hideTooltip()">
+						<img class="cuscustomers_pic" src="./img/sourceImg/review/k2.jpg" data-tooltip="Click to Zoom"
+							onclick="zoomIn(this)" onmouseout="hideTooltip()">
+						<img class="cuscustomers_pic" src="./img/sourceImg/review/k3.jpeg" data-tooltip="Click to Zoom"
+							onclick="zoomIn(this)" onmouseout="hideTooltip()">
+						<img class="cuscustomers_pic" src="./img/sourceImg/review/k4.jpg" data-tooltip="Click to Zoom"
+							onclick="zoomIn(this)" onmouseout="hideTooltip()">
 					</div>
+					<div id="overlay" class="overlay" onclick="zoomOut()">
+						<span class="close-button" onclick="zoomOut()">&times;</span>
+						<img id="zoomed-image" class="zoomed-image">
+					</div>
+					<div id="tooltip" class="tooltip"></div>
 				</div>
-				<div class="col-lg-8 col-md-8 ranting_zone">
-					<div class="">
 
-						<div class="card">
-							<div class="row justify-content-left d-flex">
-								<div class="col-md-4 d-flex flex-column">
-									<div class="rating-box">
-										<h1 id="averageRating" class="rating_average">4.0</h1>
-										<p id="reviewCount" class="rating_average_5">(2 reviews)</p>
-									</div>
+				<div class="col-lg-8 col-md-8">
+					<div class="card rating_zone">
+						<div class="row justify-content-left d-flex">
+							<div class="col-md-4 d-flex flex-column">
+								<div class="rating-box">
+									<h1 id="averageRating" class="rating_average">4.0</h1>
+									<p id="reviewCount" class="rating_average_5">(2 reviews)</p>
 								</div>
+							</div>
 
-								<div class="col-md-8">
-									<div class="rating-bar0 justify-content-center">
-										<table class="text-left mx-auto">
-											<tr>
-												<td class="rating-label">Excellent</td>
-												<td class="rating-bar">
-													<div id="barExcellent" class="bar-container">
-														<div class="bar-5"></div>
-													</div>
-												</td>
-												<td id="countExcellent" class="text-right">0</td>
-											</tr>
+							<div class="col-md-8">
+								<div class="rating-bar0 justify-content-center">
+									<table class="text-left mx-auto">
+										<tr>
+											<td class="rating-label">Excellent</td>
+											<td class="rating-bar">
+												<div id="barExcellent" class="bar-container">
+													<div class="bar-5"></div>
+												</div>
+											</td>
+											<td id="countExcellent" class="text-right">0</td>
+										</tr>
 
-											<tr>
-												<td class="rating-label">Good</td>
-												<td class="rating-bar">
-													<div id="barGood" class="bar-container">
-														<div class="bar-4"></div>
-													</div>
-												</td>
-												<td id="countGood" class="text-right">2</td>
-											</tr>
+										<tr>
+											<td class="rating-label">Good</td>
+											<td class="rating-bar">
+												<div id="barGood" class="bar-container">
+													<div class="bar-4"></div>
+												</div>
+											</td>
+											<td id="countGood" class="text-right">2</td>
+										</tr>
 
-											<tr>
-												<td class="rating-label">Average</td>
-												<td class="rating-bar">
-													<div id="barAverage" class="bar-container">
-														<div class="bar-3"></div>
-													</div>
-												</td>
-												<td id="countAverage" class="text-right">0</td>
-											</tr>
+										<tr>
+											<td class="rating-label">Average</td>
+											<td class="rating-bar">
+												<div id="barAverage" class="bar-container">
+													<div class="bar-3"></div>
+												</div>
+											</td>
+											<td id="countAverage" class="text-right">0</td>
+										</tr>
 
-											<tr>
-												<td class="rating-label">Poor</td>
-												<td class="rating-bar">
-													<div id="barPoor" class="bar-container">
-														<div class="bar-2"></div>
-													</div>
-												</td>
-												<td id="countPoor" class="text-right">0</td>
-											</tr>
+										<tr>
+											<td class="rating-label">Poor</td>
+											<td class="rating-bar">
+												<div id="barPoor" class="bar-container">
+													<div class="bar-2"></div>
+												</div>
+											</td>
+											<td id="countPoor" class="text-right">0</td>
+										</tr>
 
-											<tr>
-												<td class="rating-label">Terrible</td>
-												<td class="rating-bar">
-													<div id="barTerrible" class="bar-container">
-														<div class="bar-1"></div>
-													</div>
-												</td>
-												<td id="countTerrible" class="text-right">0</td>
-											</tr>
-										</table>
-									</div>
+										<tr>
+											<td class="rating-label">Terrible</td>
+											<td class="rating-bar">
+												<div id="barTerrible" class="bar-container">
+													<div class="bar-1"></div>
+												</div>
+											</td>
+											<td id="countTerrible" class="text-right">0</td>
+										</tr>
+									</table>
 								</div>
 							</div>
 						</div>
+					</div>
 
-						<!--Commnent box  -->
-						<form id="commentForm">
-							<div class="row comment_box">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="comment_label" for="name">Full Name</label>
-										<input type="text" class="form-control" name="name" id="name" placeholder="Name"
-											required>
-									</div>
+					<!--Commnent box  -->
+					<form id="commentForm">
+						<div class="row comment_box">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="comment_label" for="name">Full Name</label>
+									<input type="text" class="form-control" name="name" id="name" placeholder="Name"
+										required>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="comment_label" for="email">Email Address</label>
-										<input type="email" class="form-control" name="email" id="email"
-											placeholder="Email" required>
-									</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="comment_label" for="email">Email Address</label>
+									<input type="email" class="form-control" name="email" id="email" placeholder="Email"
+										required>
 								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="comment_label" for="message">Comment</label>
-										<textarea name="message" class="form-control" id="message" cols="30" rows="4"
-											placeholder="Write something..." required></textarea>
-									</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="comment_label" for="message">Comment</label>
+									<textarea name="message" class="form-control" id="message" cols="30" rows="4"
+										placeholder="Write something..." required></textarea>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="comment_label" for="rating">Rating</label>
-										<div class="rating">
-											<input type="radio" name="rating" id="star5" value="5" required />
-											<label for="star5"></label>
-											<input type="radio" name="rating" id="star4" value="4" />
-											<label for="star4"></label>
-											<input type="radio" name="rating" id="star3" value="3" />
-											<label for="star3"></label>
-											<input type="radio" name="rating" id="star2" value="2" />
-											<label for="star2"></label>
-											<input type="radio" name="rating" id="star1" value="1" />
-											<label for="star1"></label>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="comment_label" for="file">Choose Image</label>
-										<input type="file" class="form-control" name="file" id="file" accept="image/*">
-									</div>
-								</div>
-
-								<div class="col-md-12">
-									<div class="form-group comment_btn">
-										<input type="button" value="Comment" class="btn primary-btn site-btn"
-											onclick="addComment()">
-										<div class="submitting" id="commentSubmitting"></div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="comment_label" for="rating">Rating</label>
+									<div class="rating">
+										<input type="radio" name="rating" id="star5" value="5" required />
+										<label for="star5"></label>
+										<input type="radio" name="rating" id="star4" value="4" />
+										<label for="star4"></label>
+										<input type="radio" name="rating" id="star3" value="3" />
+										<label for="star3"></label>
+										<input type="radio" name="rating" id="star2" value="2" />
+										<label for="star2"></label>
+										<input type="radio" name="rating" id="star1" value="1" />
+										<label for="star1"></label>
 									</div>
 								</div>
 							</div>
-						</form>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="comment_label" for="file">Choose Image</label>
+									<input type="file" class="form-control" name="file" id="file" accept="image/*">
+								</div>
+							</div>
 
-					</div>
+							<div class="col-md-12">
+								<div class="form-group comment_btn">
+									<input type="button" value="Comment" class="btn primary-btn site-btn"
+										onclick="addComment()">
+									<div class="submitting" id="commentSubmitting"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+
 				</div>
 
 				<div class="col-lg-12">
@@ -232,12 +233,9 @@
 
 						<h6 class="comments_title">Comments:</h6>
 
-
 						<div id="comments"></div>
 
-
-						<div class="card">
-
+						<div class="card" id="comment1">
 							<div class="row_cmt d-flex border_info">
 								<div class="">
 									<img class="profile-pic" src="./img/sourceImg/review/avatar.jpg">
@@ -265,19 +263,21 @@
 									come back next time</p>
 							</div>
 							<div class="row_cmt text-left">
-								<img class="pic" src="./img/sourceImg/review/images.jfif">
-								<img class="pic" src="./img/sourceImg/review/images.jfif">
-								<img class="pic" src="./img/sourceImg/review/images.jfif">
+								<img class="pic" src="./img/sourceImg/review/images.jfif" onclick="zoomIn(this)">
+								<img class="pic" src="./img/sourceImg/review/images.jfif" onclick="zoomIn(this)">
+								<img class="pic" src="./img/sourceImg/review/images.jfif" onclick="zoomIn(this)">
 							</div>
 							<div class="row_cmt text-left mt-4">
-								<div class="like mr-3 vote">
-									<img src="" width="3%">
+								<div class="mr-3 vote" onclick="toggleReplyForm('comment1')">
+									<img src="" width="2%">
 									<span class="blue-text pl-2">Reply</span>
 								</div>
 
 							</div>
+							
 						</div>
-
+						
+						
 						<div class="card">
 							<div class="row_cmt d-flex border_info">
 								<div class=""> <img class="profile-pic" src="./img/sourceImg/review/avatar.jpg">
@@ -306,12 +306,12 @@
 									parties, thank you.</p>
 							</div>
 							<div class="row_cmt text-left">
-								<img class="pic" src="./img/sourceImg/review/images (1).jfif">
-								<img class="pic" src="./img/sourceImg/review/images (1).jfif">
-								<img class="pic" src="./img/sourceImg/review/images (1).jfif">
+								<img class="pic" src="./img/sourceImg/review/images (1).jfif" onclick="zoomIn(this)">
+								<img class="pic" src="./img/sourceImg/review/images (1).jfif" onclick="zoomIn(this)">
+								<img class="pic" src="./img/sourceImg/review/images (1).jfif" onclick="zoomIn(this)">
 							</div>
 							<div class="row_cmt text-left mt-4">
-								<div class="like mr-3 vote">
+								<div class="mr-3 vote">
 									<img src="" width="3%">
 									<span class="blue-text pl-2">Reply</span>
 								</div>
@@ -320,9 +320,9 @@
 						</div>
 					</div>
 				</div>
-				<div>
+				<div class="btn-seemore">
 					<button class="btn primary-btn">
-						See more
+						More
 					</button>
 				</div>
 			</div>
@@ -424,6 +424,7 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Footer Section End -->
 
 	<!-- Js Plugins -->
 	<script src="js/jquery.min.js"></script>
