@@ -1,3 +1,20 @@
+//Of Review-------------------------------
+var ratings = {
+    totalScore: 8,
+    totalCount: 2,
+    countExcellent: 0, 
+    countGood: 2,      
+    countAverage: 0,   
+    countPoor: 0,      
+    countTerrible: 0,   
+    barExcellentElement: 0,
+    barGoodElement: 100,
+    barAverageElement: 0,
+    barPoorElement: 0,
+    barTerribleElement: 0
+};
+//---------------------------------------
+
 // Artist
 $(document).ready(function () {
 
@@ -63,111 +80,7 @@ document.getElementById('bookingBtn').addEventListener('click', function () {
 });
 
 
-//------KIEN ZONE-------//
-// ZoomIn - ZomOut
-function zoomIn(element) {
-    element.style.transform = "scale(1.5)";
-    element.style.zIndex = "2";
-}
-function zoomOut(element) {
-    element.style.transform = "scale(1)";
-    element.style.zIndex = "1";
-}
 
-//---Add Comment----//
-
-function addComment() {
-    // Lấy giá trị từ các trường nhập
-    var name = document.getElementById("name").value;
-    var commentText = document.getElementById("message").value;
-    var rating = document.getElementById("rating").value;
-    var fileInput = document.getElementById("file");
-    var imageFile = fileInput.files[0];
-
-    // Kiểm tra xem có dữ liệu không
-    if (name && commentText) {
-        // Tạo một đối tượng div mới để chứa bình luận
-        var commentDiv = document.createElement("div");
-        commentDiv.className = "row_cmt d-flex";
-
-        // Thêm hình ảnh người dùng (đặt hình ảnh theo đường dẫn tùy chọn)
-        var profilePicDiv = document.createElement("div");
-        profilePicDiv.innerHTML = '<img class="profile-pic" src="./img/sourceImg/review/avatar.jpg">';
-        commentDiv.appendChild(profilePicDiv);
-
-        // Thêm thông tin bình luận
-        var commentInfoDiv = document.createElement("div");
-        commentInfoDiv.className = "d-flex flex-column";
-
-        var nameLink = document.createElement("a");
-        nameLink.className = "mt-2 mb-0";
-        nameLink.appendChild(document.createTextNode(name));
-        commentInfoDiv.appendChild(nameLink);
-
-        // Thêm đánh giá dạng ngôi sao
-        var ratingDiv = document.createElement("div");
-        ratingDiv.className = "text-left";
-        ratingDiv.innerHTML = '<p class="text-muted">' + getStarRating(rating) + '</p>';
-        commentInfoDiv.appendChild(ratingDiv);
-
-        commentDiv.appendChild(commentInfoDiv);
-
-        // Thêm ngày bình luận
-        var dateDiv = document.createElement("div");
-        dateDiv.className = "ml-auto";
-        var currentDate = new Date();
-        dateDiv.innerHTML = '<p class="text-muted pt-5 pt-sm-3">' + currentDate.toLocaleDateString() + '</p>';
-        commentDiv.appendChild(dateDiv);
-
-        // Hiển thị thông báo thành công (hoặc thực hiện các công việc khác tùy thuộc vào nhu cầu của bạn)
-        var submittingElement = document.getElementById("commentSubmitting");
-        submittingElement.innerHTML = "Comment submitted successfully!";
-        setTimeout(function () {
-            submittingElement.innerHTML = "";
-        }, 3000);
-
-        // Thêm đối tượng div vào phần hiển thị bình luận
-        document.getElementById("comments").appendChild(commentDiv);
-
-        // Xóa nội dung của các trường nhập
-        document.getElementById("name").value = "";
-        document.getElementById("message").value = "";
-        document.getElementById("rating").value = "5"; // Đặt lại đánh giá mặc định
-        fileInput.value = "";
-    } else {
-        alert("Vui lòng nhập họ tên và bình luận!");
-    }
-}
-
-function uploadFile() {
-    var fileInput = document.getElementById("file");
-    var imageFile = fileInput.files[0];
-
-    if (imageFile) {
-        // Thực hiện xử lý tải lên hình ảnh ở đây
-        // Đoạn mã xử lý tải lên có thể được thêm vào đây
-        var uploadingElement = document.getElementById("uploadSubmitting");
-        uploadingElement.innerHTML = "Image uploaded successfully!";
-        setTimeout(function () {
-            uploadingElement.innerHTML = "";
-        }, 3000);
-    } else {
-        alert("Vui lòng chọn một hình ảnh để tải lên!");
-    }
-}
-
-// Hàm trả về chuỗi HTML chứa ngôi sao dựa trên đánh giá
-function getStarRating(rating) {
-    var starsHtml = '';
-    for (var i = 1; i <= 5; i++) {
-        if (i <= rating) {
-            starsHtml += '<i class="fas fa-star star-active"></i>';
-        } else {
-            starsHtml += '<i class="fas fa-star star-inactive"></i>';
-        }
-    }
-    return starsHtml;
-}
 
 // Function to update available date and time options based on selected location
 function updateDateTimeOptions() {
@@ -279,5 +192,303 @@ function submitForm() {
 
 
 
+//----------------Review---------------//
+// ZoomIn - ZomOut
+function zoomIn(element) {
+    element.style.transform = "scale(1.5)";
+    element.style.zIndex = "2";
+}
+function zoomOut(element) {
+    element.style.transform = "scale(1)";
+    element.style.zIndex = "1";
+}
+
+//---Add Comment----//
+function addComment() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    var rating = document.querySelector('input[name="rating"]:checked');
+
+    if (name && isValidEmail(email) && message && rating) {
+        
+        var ratingValue = rating.value;
+
+    
+        var commentDiv = document.createElement("div");
+        commentDiv.className = "card";
+
+        var infoDiv = document.createElement("div");
+        infoDiv.className = "row_cmt d-flex border_info";
+        commentDiv.appendChild(infoDiv);
+
+        var profilePicDiv = document.createElement("div");
+        profilePicDiv.innerHTML = '<img class="profile-pic" src="./img/sourceImg/review/avatar.jpg">';
+        infoDiv.appendChild(profilePicDiv);
+
+        var commentInfoDiv = document.createElement("div");
+        commentInfoDiv.className = "flex-column";
+
+        var nameLink = document.createElement("a");
+        nameLink.className = "mt-2 mb-0";
+        nameLink.appendChild(document.createTextNode(name));
+        commentInfoDiv.appendChild(nameLink);
 
 
+        var ratingDiv = document.createElement("div");
+        ratingDiv.className = "text-left";
+        ratingDiv.innerHTML = '<p class="text-muted">' + getStarRating(ratingValue) + '</p>';
+        commentInfoDiv.appendChild(ratingDiv);
+
+        infoDiv.appendChild(commentInfoDiv);
+
+
+        var dateDiv = document.createElement("div");
+        dateDiv.className = "ml-auto";
+        var currentDate = new Date();
+        dateDiv.innerHTML = '<p class="text-muted pt-5 pt-sm-3">' + currentDate.toLocaleDateString() + '</p>';
+        infoDiv.appendChild(dateDiv);
+
+
+        var contentDiv = document.createElement("div");
+        contentDiv.className = "row_cmt text-left mt-4";
+        contentDiv.innerHTML = '<p class="content">' + message + '</p>';
+        commentDiv.appendChild(contentDiv);
+
+
+        var fileInput = document.getElementById("file");
+        if (fileInput.files.length > 0) {
+            var imagesDiv = document.createElement("div");
+            imagesDiv.className = "row_cmt text-left";
+
+            for (var i = 0; i < fileInput.files.length; i++) {
+                var imgElement = document.createElement("img");
+                imgElement.className = "pic";
+                imgElement.src = URL.createObjectURL(fileInput.files[i]);
+                imagesDiv.appendChild(imgElement);
+            }
+            commentDiv.appendChild(imagesDiv);
+        }
+
+
+        var replyDiv = document.createElement("div");
+        replyDiv.className = "row_cmt text-left mt-4";
+        
+        var likeDiv = document.createElement("div");
+        likeDiv.className = "like mr-3 vote";
+    
+        var replyImg = document.createElement("img");
+        replyImg.src = "";
+        replyImg.width = "3%";
+    
+        var replySpan = document.createElement("span");
+        replySpan.className = "blue-text pl-2";
+        replySpan.appendChild(document.createTextNode("Reply"));
+    
+        likeDiv.appendChild(replyImg);
+        likeDiv.appendChild(replySpan);
+        replyDiv.appendChild(likeDiv);
+    
+
+        commentDiv.appendChild(replyDiv);
+
+
+        var commentsContainer = document.getElementById("comments");
+       
+        if (commentsContainer.children.length > 0) {
+            commentsContainer.insertBefore(commentDiv, commentsContainer.firstChild);
+        } else {
+            commentsContainer.appendChild(commentDiv);
+        }
+
+
+        updateRatingStats();
+
+
+    } else {
+        alert("Please enter your name, email and the content you want to leave a review for!");
+
+    }
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+    document.getElementById("file").value = "";
+    document.querySelector('input[name="rating"]:checked').checked = false;
+
+}
+
+
+
+function updateRatingStats() {
+
+    var rating = document.querySelector('input[name="rating"]:checked').value;
+
+    ratings.totalScore += parseInt(rating);
+    ratings.totalCount++;
+
+    switch (parseInt(rating)) {
+        case 5:
+            ratings.countExcellent++;
+            break;
+        case 4:
+            ratings.countGood++;
+            break;
+        case 3:
+            ratings.countAverage++;
+            break;
+        case 2:
+            ratings.countPoor++;
+            break;
+        case 1:
+            ratings.countTerrible++;
+            break;
+    }
+
+    document.getElementById('averageRating').textContent = (ratings.totalScore / ratings.totalCount).toFixed(1);
+    document.getElementById('reviewCount').textContent = '(' + ratings.totalCount + ' reviews)';
+
+    var barExcellentElement = document.getElementById('barExcellent');
+    if (barExcellentElement) {
+        barExcellentElement.style.width = (ratings.countExcellent / ratings.totalCount * 100) + '%'; 
+        barExcellentElement.style.backgroundColor = '#fcda84'; 
+    }
+    document.getElementById('countExcellent').textContent = ratings.countExcellent;
+
+    var barGoodElement = document.getElementById('barGood');
+    if (barGoodElement) {
+        barGoodElement.style.width = (ratings.countGood / ratings.totalCount * 100) + '%'; 
+        barGoodElement.style.backgroundColor = '#fcda84'; 
+    }
+    document.getElementById('countGood').textContent = ratings.countGood;
+
+    var barAverageElement = document.getElementById('barAverage');
+    if (barAverageElement) {
+        barAverageElement.style.width = (ratings.countAverage / ratings.totalCount * 100) + '%'; 
+        barAverageElement.style.backgroundColor = '#fcda84'; 
+    }
+    document.getElementById('countAverage').textContent = ratings.countAverage;
+
+    var barPoorElement = document.getElementById('barPoor');
+    if (barPoorElement) {
+        barPoorElement.style.width = (ratings.countPoor / ratings.totalCount * 100) + '%'; 
+        barPoorElement.style.backgroundColor = '#fcda84'; 
+    }
+    document.getElementById('countPoor').textContent = ratings.countPoor;
+
+    var barTerribleElement = document.getElementById('barTerrible');
+    if (barTerribleElement) {
+        barTerribleElement.style.width = (ratings.countTerrible / ratings.totalCount * 100) + '%'; 
+        barTerribleElement.style.backgroundColor = '#fcda84'; 
+    }
+    document.getElementById('countTerrible').textContent = ratings.countTerrible;
+
+}
+
+
+
+function uploadFile() {
+    var fileInput = document.getElementById("file");
+    var imageFile = fileInput.files[0];
+
+    if (imageFile) {
+        var uploadingElement = document.getElementById("uploadSubmitting");
+        uploadingElement.innerHTML = "Image uploaded successfully!";
+        setTimeout(function () {
+            uploadingElement.innerHTML = "";
+        }, 3000);
+    } else {
+        alert("");
+    }
+}
+
+function getStarRating(rating) {
+    var starsHtml = '';
+    for (var i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            starsHtml += '<i class="fas fa-star star-active ml-1"></i>';
+        } else {
+            starsHtml += '<i class="fas fa-star star-inactive ml-1"></i>';
+        }
+    }
+    return starsHtml;
+}
+
+
+function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+//----------------Review---------------//
+
+
+//--------------Contact Us--------------//
+function validateFormContact() {
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value;
+
+    if (name.trim() === '') {
+        showAlert('Please enter your name.');
+        return false;
+    }
+
+    // Check that either email or phone has a value
+    if (email.trim() === '' && phone.trim() === '') {
+        alert('Please enter either an email address or a phone number.');
+        return false;
+    }
+
+    // If both email and phone have values, check their formats
+    if (email.trim() !== '') {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+    }
+
+    if (phone.trim() !== '') {
+        var phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(phone)) {
+            alert('Please enter a valid phone number (10 digits).');
+            return false;
+        }
+    }
+
+    if (subject.trim() === '') {
+        showAlert('Please enter a subject.');
+        return false;
+    }
+
+    if (message.trim() === '') {
+        showAlert('Please enter a message.');
+        return false;
+    }
+
+    // Display success message
+    showNotification('Thank you for leaving your information, we will contact you soon !');
+
+    //Clear data input
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
+
+    return false; // Submit the form if all validations pass
+}
+
+function showAlert(message) {
+    alert(message);
+}
+
+function showNotification(message) {
+    var notificationDiv = document.getElementById('notification');
+    notificationDiv.innerHTML = message;
+    notificationDiv.style.display = 'block';
+}
+//End----------Contact Us------------//

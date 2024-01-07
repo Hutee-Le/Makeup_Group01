@@ -14,8 +14,11 @@
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
+<!-- body -->
 
-<body>
+<body class="main-layout"
+	style="background-image: url(./img/sourceImg/banner.jpg);background-repeat: no-repeat;background-size:contain;">
+	
 	<!-- Header Section Begin -->
 	<header class="header">
 		<div class="container">
@@ -51,9 +54,9 @@
 		</div>
 	</header>
 	<!-- Header Section End -->
-	<section class="ftco-section">
-		<div class="container">
 
+	<section class="contactUs">
+		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12">
 					<div class="wrapper">
@@ -61,17 +64,26 @@
 							<div class="col-md-7">
 								<div class="contact-wrap w-100 p-md-5 p-4">
 									<h3 class="mb-4">Contact Us</h3>
-
-									<div id="form-message-success" class="mb-4">
-										<br>
-									</div>
-									<form method="POST" name="contactForm" class="contactForm">
+									<form method="POST" name="contactForm" class="contactForm"
+										onsubmit="return validateFormContact()">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-md-12">
 												<div class="form-group">
 													<label class="label" for="name">Full Name</label>
 													<input type="text" class="form-control" name="name" id="name"
 														placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-5">
+												<div class="form-group">
+													<label class="label" for="phone">Phone Number</label>
+													<input type="tel" class="form-control" name="phone" id="phone"
+														placeholder="Your phone">
+												</div>
+											</div>
+											<div class="col-md-1">
+												<div class="form-group">
+													<p class="text_or">Or</p>
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -95,10 +107,15 @@
 														rows="4" placeholder="Message"></textarea>
 												</div>
 											</div>
-											<div class="col-md-12">
+											<div class="col-md-4">
 												<div class="form-group">
 													<input type="submit" value="Send Message" class="btn primary-btn">
 													<div class="submitting"></div>
+												</div>
+											</div>
+											<div class="col-md-8">
+												<div class="form-group">
+													<div id="notification" style="display:none;"></div>
 												</div>
 											</div>
 										</div>
@@ -107,8 +124,8 @@
 							</div>
 							<div class="col-md-5 d-flex align-items-stretch">
 								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d79591.3548073501!2d-95.15656702509847!3d29.660448895101954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1703439066129!5m2!1svi!2s"
-									width="600" height="" style="border:1" allowfullscreen="" loading="lazy"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6498.05132363571!2d-73.98577529514712!3d40.74649994329156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26167f3a48935%3A0xf0289bad09bbeb65!2sSocial%20Friend!5e0!3m2!1svi!2s!4v1704289259590!5m2!1svi!2s"
+									width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
 									referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 						</div>
@@ -121,7 +138,8 @@
 										<span class="fa fa-map-marker"></span>
 									</div>
 									<div class="text">
-										<p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+										<p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016
+										</p>
 									</div>
 								</div>
 							</div>
@@ -162,6 +180,102 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- Footer Section Begin -->
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-lg-6 col-md-12">
+								<div class="hedingh3 text_align_left">
+									<h3>About</h3>
+									<p> Lê Minh Nhựt (Student1515874
+										)
+									</p>
+									<p>
+										Nguyễn Trung Kiên (Student1513403
+										)
+
+									</p>
+									<p>
+										Phạm Đức Quỳnh (Student1513379
+										)
+
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="hedingh3 text_align_left">
+									<h3>Blog</h3>
+									<p>What doesnt kill you will make u stronger</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="row">
+							<div class="col-lg-6 col-md-12">
+								<div class="hedingh3 text_align_left">
+									<h3>Menu</h3>
+									<ul class="menu_footer">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About</a></li>
+										<li><a href="service.html">Service</a></li>
+										<li><a href="blog.html">Blog</a></li>
+										<li><a href="contact.html">Contact us</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12">
+								<div class="hedingh3  text_align_left">
+									<h3>Newsletter</h3>
+									<form id="colof" class="form_subscri">
+										<input class="newsl" placeholder="Email" type="text" name="Email">
+										<button class="subsci_btn">Subscribe</button>
+									</form>
+									<ul class="top_infomation">
+										<li><i class="fa fa-phone" aria-hidden="true"></i>
+											+084 4815xxxx
+										</li>
+										<li><i class="fa fa-envelope" aria-hidden="true"></i>
+											<a href="Javascript:void(0)">@gmail.com</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="follow text_align_center">
+								<h3>Follow Us</h3>
+								<ul class="social_icon ">
+									<li><a href="Javascript:void(0)"><i class="fa fa-facebook"
+												aria-hidden="true"></i></a></li>
+									<li><a href="Javascript:void(0)"><i class="fa fa-twitter"
+												aria-hidden="true"></i></a></li>
+									<li><a href="Javascript:void(0)"><i class="fa fa-linkedin"
+												aria-hidden="true"></i></a></li>
+									<li><a href="Javascript:void(0)"><i class="fa fa-instagram"
+												aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<p>© 2023 All Rights Reserved. Design by Group 1 - NHUT/KIEN/QUYNH</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 	<!-- Js Plugins -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>

@@ -1477,6 +1477,7 @@ ul.social_icon li a i:hover {
 
 /* QUỲNH END */
 
+
 /*------------------------------------
 KIEN - contact page - start
 -------------------------------------*/
@@ -1488,15 +1489,12 @@ label {
   font-size: 1rem;
 }
 
-h3,
-.h3
- {
+.h3 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
-h3,
 .h3 {
   font-size: 2rem;
 }
@@ -1517,8 +1515,7 @@ h3,
 .col-md-7,
 .col-md-12,
 .col-lg-3,
-.col-lg-6
- {
+.col-lg-6 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -1628,19 +1625,21 @@ textarea.form-control {
   padding: 1.5rem !important;
 }
 
-.h3
- {
+.h3 {
   line-height: 1.5;
   font-weight: 400;
   font-family: "Poppins", Arial, sans-serif;
   color: #000;
 }
 
-.ftco-section {
-  padding: 3em 0;
+.contactUs {
+  padding-top: 3em;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.text{
+.text {
   text-align: center;
 }
 
@@ -1684,6 +1683,9 @@ textarea.form-control {
 .dbox .text {
   width: 100%;
 }
+.text_or{
+  padding-top: 45px;
+}
 /*------------------------------------
 KIEN - contact page - end
 -------------------------------------*/
@@ -1706,44 +1708,45 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.comment_box{
+.comment_box {
   background-color: rgba(223, 181, 208, 0.07);
   margin-right: 0px;
   margin-left: 0px;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, .125);
   border-radius: 0.25rem;
 }
 
-.comment_label{
+.comment_label {
   font-weight: bold;
   margin-bottom: 0rem;
   margin-top: 1rem;
 }
 
 
-.row_cmt{
+.row_cmt {
   padding-left: 10px;
   padding-right: 10px;
 }
-
-.info_artist{
-
+.border_info{
+  border-bottom: 1px solid #ccc;
+  background-color: #ebdcd7;
 }
 
-.ranting_zone{
+.ranting_zone {
   padding-top: 2.6rem;
 }
 
-.img_arttist{
-padding-bottom: 0px;
+.img_arttist {
+  padding-bottom: 0px;
 }
-.customers_text{
+
+.customers_text {
   text-align: center;
   padding-top: 10px;
 }
 
-.customers_pic{
+.customers_pic {
   display: flex;
   transition: transform 1s ease-in-out;
   position: relative;
@@ -1751,7 +1754,7 @@ padding-bottom: 0px;
 }
 
 .mt-2 {
-font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 /*-------Start Avegare Rating------- */
@@ -1760,47 +1763,51 @@ font-size: 1.3rem;
   height: 130px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #FBC02D;
-}
-.rating_average{
-  text-align: center;
-  padding-top:10px;
-}
-.rating_average_5{
-text-align: center;
+  background-color: #fcda84;
 }
 
-.rating_star{
+.rating_average {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.rating_average_5 {
+  text-align: center;
+}
+
+.rating_star {
   padding-left: 48px;
 }
+
 .rating-label {
   font-weight: bold
 }
+
 .rating-bar {
   width: 300px;
   padding: 8px;
   border-radius: 5px
 }
 
-.flex-column{
+.flex-column {
   padding-top: 10px;
 }
 
-.artist_name{
-font-size: 1.5rem;
+.artist_name {
+  font-size: 1.5rem;
 }
 
 
-.comments_table{
+.comments_table {
   padding-bottom: 20px;
-  
 }
-.comments_title{
-padding-top: 20px;
-padding-bottom: 5px;
-font-size: 1.3rem;
 
+.comments_title {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 1.3rem;
 }
+
 .bar-container {
   width: 100%;
   background-color: #f1f1f1;
@@ -1812,41 +1819,36 @@ font-size: 1.3rem;
 }
 
 .bar-5 {
-  width: 70%;
   height: 13px;
-  background-color: #FBC02D;
   border-radius: 20px
 }
 
 .bar-4 {
-  width: 30%;
   height: 13px;
-  background-color: #FBC02D;
+  background-color: #fcda84;
   border-radius: 20px
 }
 
 .bar-3 {
-  width: 20%;
+
   height: 13px;
-  background-color: #FBC02D;
+
   border-radius: 20px
 }
 
 .bar-2 {
-  width: 10%;
+
   height: 13px;
-  background-color: #FBC02D;
+
   border-radius: 20px
 }
 
 .bar-1 {
-  width: 0%;
+
   height: 13px;
-  background-color: #FBC02D;
+
   border-radius: 20px
 }
-
-
 
 td {
   padding-bottom: 5px;
@@ -1889,7 +1891,7 @@ td {
 
 .pic {
   width: 80px;
-  height: 80px;
+  height: auto;
   margin-right: 10px;
   margin-top: 10px;
 }
@@ -1898,24 +1900,72 @@ td {
   cursor: pointer
 }
 
-.title-arttist{
+.title-arttist {
   text-align: center;
   font-size: 2rem;
 }
 
-.title-arttist{
+.title-arttist {
   padding-bottom: 20px;
   padding-top: 20px;
 }
+
 .review-art {
   padding-top: 20px;
 }
 
-.commment_btn{
+.commment_btn {
   display: flex;
 }
-.site-btn{
+
+.site-btn {
   margin-right: 10px;
+}
+
+
+
+
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 50px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  display: inline-block;
+  position: relative;
+  width: 1.3em;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.rating label:before {
+  content: "\2605";
+  position: absolute;
+  opacity: 1;
+  font-size: 35px;
+}
+
+.rating input:checked~label:before {
+  opacity: 1;
+  color: #ffcc00;
+}
+
+.rating label:hover:before,
+.rating label:hover~label:before {
+  opacity: 1;
+  color: #ffcc00;
+  transition: color 0.5s ease-in-out;
+  transform: scale(1.2);
 }
 
 /*------------------------------------
